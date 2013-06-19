@@ -1,7 +1,10 @@
-#!/usr/bin/bash
+#!/bin/bash
+
+infile="phrases_special.txt"
+outfile="phrases_special_rev.md5"
 
 while read p; do
   md5 -s "$p"
-  md5 -s "$p" >> phrases_special_rev.md5
-done < phrases_special.txt
-wc -l phrases_special_rev.md5
+  md5 -s "$p" >> "$outfile"
+done < "$infile"
+wc -l "$outfile" 
