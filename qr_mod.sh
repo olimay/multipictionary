@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-#!/bin/bash
-
 infile=
 
 if [ -f "$1" ]; then
